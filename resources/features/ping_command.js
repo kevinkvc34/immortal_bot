@@ -13,7 +13,7 @@ function pingPlayer(msg, args, client)
     else
     {
 
-        if (msg.mentions.members.size() == 0)
+        if (msg.mentions.members == 0)
         {
 
             msg.channel.send("Invalid user! Make sure to tag them!");
@@ -23,7 +23,7 @@ function pingPlayer(msg, args, client)
         else
         {
 
-            msg.author.send(`You just got pinged <@${args[0]}`);
+            msg.author.send(`You just got pinged ${args[0]}`);
             return;
 
         }
