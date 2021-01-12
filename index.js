@@ -5,6 +5,7 @@ const fs = require("fs");
 const client = new Discord.Client();
 const config = require("./config/config.json");
 const ping = require('./resources/features/ping_command');
+const sensitivityConverter = require('./resources/features/sens_converter');
 
 client.login(config.BOT_TOKEN);
 
@@ -32,7 +33,7 @@ client.on("message", function(message) {
             else if (command.toLowerCase() == "sens")
             {
 
-                console.log("sens!");
+                sensitivityConverter.sensConvert(message, args, client)
 
             }
             else
