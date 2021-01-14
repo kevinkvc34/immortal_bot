@@ -21,16 +21,20 @@ client.on("message", function(message) {
         {
 
             var args = message.content.split(" ").slice(1);
-            var command = message.content.slice(2).split(" ")[0];
+            for (var i=0;i<args.length;i++)
+            {
+                args[i] = args[i].toLowerCase();
+            }
+            var command = message.content.slice(2).split(" ")[0].toLowerCase();
 
-            if (command.toLowerCase() == "ping")
+            if (command == "ping")
             {
 
                 console.log("ping detected");
                 ping.pingPlayer(message, args, client);
 
             }
-            else if (command.toLowerCase() == "sens")
+            else if (command == "sens")
             {
 
                 sensitivityConverter.sensConvert(message, args, client)
