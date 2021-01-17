@@ -1,5 +1,3 @@
 node_modules/
 resources/user_data
 config
-package.json
-package-lock.json

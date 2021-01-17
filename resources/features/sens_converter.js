@@ -526,11 +526,6 @@ function sensConvert(msg, args, client)
                         });
 
                     }
-                    //readfile
-                    //check if anything in game 
-                    //chek if anything in game > previous
-                    //makeEmbed() accordingly and send it
-                    
 
                 }
                 else
